@@ -1,0 +1,9 @@
+{
+    "name": "Unique Eyes",
+    "description": "You can slightly see in the dark, above and underwater.",
+    "type": "apoli:toggle_night_vision",
+    "strength": 0.4,
+    "key": {
+        "key": "key.origins.secondary_active"
+    }
+}

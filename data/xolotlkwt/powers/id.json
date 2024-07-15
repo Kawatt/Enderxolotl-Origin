@@ -1,0 +1,12 @@
+{
+    "hidden": true,
+    "type": "apoli:action_on_callback",
+    "entity_action_gained": {
+        "type": "apoli:execute_command",
+        "command": "execute as @s unless score @s xolotlkwt.bubble_id = @s xolotlkwt.bubble_id store result score @s xolotlkwt.bubble_id run scoreboard players add .counter xolotlkwt.bubble_id 1"
+    },
+    "entity_action_lost": {
+        "type": "apoli:execute_command",
+        "command": "scoreboard players reset @s xolotlkwt.bubble_id"
+    }
+}

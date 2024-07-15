@@ -1,0 +1,76 @@
+{
+    "name": "Play Dead",
+    "description": "In an instance you would've died, you will be granted some resistance and regeneration but you will move slower.",
+    "type": "apoli:multiple",
+    "dead": {
+        "type": "apoli:prevent_death",
+        "entity_action": {
+            "type": "apoli:and",
+            "actions": [
+                {
+                    "type": "apoli:trigger_cooldown",
+                    "power": "*:*_cool"
+                },
+                {
+                    "type": "apoli:play_sound",
+                    "sound": "entity.axolotl.death"
+                }, 
+                {
+                    "type": "apoli:execute_command",
+                    "command": "particle minecraft:portal ~ ~ ~ 0.6 0.6 0.6 0 50"
+                },
+                {
+                    "type": "apoli:apply_effect",
+                    "effect": {
+                        "effect": "invisibility",
+                        "duration": 40
+                    }
+                },
+                {
+                    "type": "apoli:apply_effect",
+                    "effect": {
+                        "effect": "regeneration",
+                        "duration": 200
+                    }
+                },
+                {
+                    "type": "apoli:apply_effect",
+                    "effect": {
+                        "effect": "slowness",
+                        "amplifier": 2,
+                        "duration": 400
+                    }
+                },
+                {
+                    "type": "apoli:apply_effect",
+                    "effect": {
+                        "effect": "water_breathing",
+                        "duration": 200
+                    }
+                },
+                {
+                    "type": "apoli:apply_effect",
+                    "effect": {
+                        "effect": "resistance",
+                        "duration": 200
+                    }
+                }
+            ]
+        },
+        "condition": {
+            "type": "apoli:resource",
+            "resource": "*:*_cool",
+            "comparison": "==",
+            "compare_to": 0
+        }
+    },
+    "cool": {
+        "type": "apoli:cooldown",
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": true,
+            "bar_index": 4,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png"
+        }
+    }
+}

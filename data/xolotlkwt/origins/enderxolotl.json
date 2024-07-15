@@ -1,0 +1,21 @@
+{
+	"powers": [
+		"origins:water_breathing",
+		"xolotlkwt:enderbubble",
+		"xolotlkwt:unique_eyes",
+		"xolotlkwt:aqua_affinity",
+		"xolotlkwt:playdead",
+		"xolotlkwt:id",
+		"origins:fragile",
+		"origins:pumpkin_hate",
+		"origins:aquatic",
+		"origins:conduit_power_on_land",
+		"origins:air_from_potions",
+		"origins:ender_particles"
+	],
+	"icon": "minecraft:bubble_coral",
+	"order": 10,
+	"impact": 3,
+	"name": "Enderxolotl",
+	"description": "Aquatic creature that has harnessed the teleportation abilities of the endermans."
+}
