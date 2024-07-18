@@ -149,7 +149,7 @@
     "detectreset": {
         "type": "apoli:action_over_time",
         "interval": 1,
-        "entity_action": {
+        "rising_action": {
             "type": "apoli:and",
             "actions": [
                 {
@@ -172,7 +172,7 @@
             "type": "apoli:resource",
             "resource": "*:*_bubble",
             "comparison": "==",
-            "compare_to": 1
+            "compare_to": 0
         }
     }
 }
