@@ -2,7 +2,7 @@
     "type": "apoli:multiple",
     "drop": {
         "type": "apoli:action_over_time",
-        "interval": 2,
+        "interval": 20,
         "rising_action": {
             "type": "apoli:and",
             "actions": [
@@ -23,21 +23,19 @@
     },
     "out": {
         "type": "apoli:action_over_time",
-        "interval": 1,
+        "interval": 4,
+        "entity_action": {
+            "type": "apoli:riding_action",
+            "action": {
+                "type": "apoli:execute_command",
+                "command": "data modify entity @s NoGravity set value 0b"
+            }
+        },
         "rising_action": {
-            "type": "apoli:and",
-            "actions": [
-                {
-                    "type": "apoli:execute_command",
-                    "command": "execute as @e[type=origins:enderian_pearl,tag=xolotlkwt.ender_bubble,limit=1,sort=nearest] run data modify entity @s NoGravity set value 0b"
-                },
-                {
-                    "type": "apoli:play_sound",
-                    "sound": "minecraft:block.bubble_column.bubble_pop",
-                    "volume": 2,
-                    "pitch": 0.6
-                }
-            ]
+            "type": "apoli:play_sound",
+            "sound": "minecraft:block.bubble_column.bubble_pop",
+            "volume": 2,
+            "pitch": 0.6
         },
         "condition": {
             "type": "apoli:fluid_height",
