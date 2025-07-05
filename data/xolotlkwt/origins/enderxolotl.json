@@ -5,7 +5,6 @@
 		"xolotlkwt:unique_eyes",
 		"xolotlkwt:aqua_affinity",
 		"xolotlkwt:playdead",
-		"xolotlkwt:id",
 		"origins:fragile",
 		"origins:pumpkin_hate",
 		"origins:aquatic",
@@ -13,7 +12,10 @@
 		"origins:air_from_potions",
 		"origins:ender_particles"
 	],
-	"icon": "minecraft:bubble_coral",
+	"icon": {
+		"item": "minecraft:bubble_coral",
+		"tag": "{CustomModelData:2394623}"
+	},
 	"order": 10,
 	"impact": 3,
 	"name": "Enderxolotl",
