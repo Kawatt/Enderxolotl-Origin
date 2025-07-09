@@ -13,8 +13,10 @@
 		"origins:ender_particles"
 	],
 	"icon": {
-		"item": "minecraft:bubble_coral",
-		"tag": "{CustomModelData:2394623}"
+		"id": "minecraft:bubble_coral",
+		"components": {
+			"custom_model_data":2394623
+		}
 	},
 	"order": 10,
 	"impact": 3,

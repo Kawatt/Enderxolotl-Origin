@@ -28,7 +28,7 @@
     "type": "apoli:multiple",
     "bubble": {
         "type": "origins:fire_projectile",
-        "tag": "{NoGravity:1b,Tags:[\"xolotlkwt.ender_bubble\",\"xolotlkwt.new_bubble\"],Item:{id:\"minecraft:ender_pearl\",Count:1b,tag:{CustomModelData:2394623}}}",
+        "tag": "{NoGravity:1b,Tags:[\"xolotlkwt.ender_bubble\",\"xolotlkwt.new_bubble\"],Item:{id:\"minecraft:ender_pearl\",count:1b,components:{\"minecraft:custom_model_data\":2394623}}}",
         "cooldown": 30,
         "hud_render": {
             "sprite_location": "origins:textures/gui/resource_bar.png",
@@ -61,7 +61,7 @@
             "type": "apoli:area_of_effect",
             "radius": 16,
             "bientity_action": {
-                "type": "apoli:add_to_set",
+                "type": "apoli:add_to_entity_set",
                 "set": "*:*_set"
             },
             "bientity_condition": {
@@ -91,7 +91,7 @@
             "type": "apoli:and",
             "actions": [
                 {
-                    "type": "apoli:action_on_set",
+                    "type": "apoli:action_on_entity_set",
                     "set": "*:*_set",
                     "bientity_action": {
                         "type": "apoli:and",
@@ -153,7 +153,7 @@
             "type": "apoli:and",
             "actions": [
                 {
-                    "type": "apoli:action_on_set",
+                    "type": "apoli:action_on_entity_set",
                     "set": "*:*_set",
                     "bientity_action": {
                         "type": "apoli:and",

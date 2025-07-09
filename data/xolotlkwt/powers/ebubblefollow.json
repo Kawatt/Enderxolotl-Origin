@@ -24,18 +24,23 @@
     "out": {
         "type": "apoli:action_over_time",
         "interval": 4,
-        "entity_action": {
-            "type": "apoli:riding_action",
-            "action": {
-                "type": "apoli:execute_command",
-                "command": "data modify entity @s NoGravity set value 0b"
-            }
-        },
         "rising_action": {
-            "type": "apoli:play_sound",
-            "sound": "minecraft:block.bubble_column.bubble_pop",
-            "volume": 2,
-            "pitch": 0.6
+            "type": "apoli:and",
+            "actions": [
+                {
+                    "type": "apoli:riding_action",
+                    "action": {
+                        "type": "apoli:execute_command",
+                        "command": "data modify entity @s NoGravity set value 0b"
+                    }
+                },
+                {
+                    "type": "apoli:play_sound",
+                    "sound": "minecraft:block.bubble_column.bubble_pop",
+                    "volume": 2,
+                    "pitch": 0.6
+                }
+            ]
         },
         "condition": {
             "type": "apoli:fluid_height",
@@ -50,10 +55,13 @@
         "entity_action": {
             "type": "apoli:riding_action",
             "action": {
-                "type": "apoli:add_velocity",
-                "z": 0.4,
-                "space": "velocity_normalized",
-                "server": false
+                "type": "apoli:side",
+                "action": {
+                    "type": "apoli:add_velocity",
+                    "z": 0.4,
+                    "space": "velocity_normalized"
+                },
+                "side": "server"
             }
         },
         "condition": {
@@ -71,8 +79,5 @@
             "held_item",
             "elytra"
         ]
-    },
-    "use": {
-        "type": "apoli:prevent_being_used"
     }
 }

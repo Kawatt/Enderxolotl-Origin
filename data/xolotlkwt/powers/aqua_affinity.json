@@ -5,8 +5,8 @@
   "underwater": {
     "type": "origins:modify_break_speed",
     "modifier": {
-      "operation": "multiply_total",
-      "value": 2
+      "operation": "multiply_total_multiplicative",
+      "amount": 2
     },
     "condition": {
       "type": "origins:and",
@@ -27,8 +27,8 @@
   "ungrounded": {
     "type": "origins:modify_break_speed",
     "modifier": {
-      "operation": "multiply_total",
-      "value": 1
+      "operation": "multiply_total_multiplicative",
+      "amount": 1
     },
     "condition": {
       "type": "origins:and",
